@@ -19,7 +19,11 @@
 }
 
 .bg-black {
-  background-color: #151515 impot !important;
+  background-color: #151515 !important;
+}
+
+.bg-ash {
+  background-color: #aaaaaa !important;
 }
 
 .color-white {
@@ -322,6 +326,14 @@
   background-image: url(/images/blog.png) !important;
 }
 
+.image-contactus {
+  background-image: url(/images/contactus.png) !important;
+}
+
+.image-about {
+  background-image: url(/images/about.png) !important;
+}
+
 .gap-md {
   gap: 48px !important;
 }
@@ -337,6 +349,17 @@
   /* border-radius: 16px; */
 }
 
+.icon-card {
+  height: 290px;
+}
+
+.img-infocard {
+  justify-content: end;
+}
+
+.info-card-text {
+}
+
 @media (min-width: 990px) {
   .card {
     max-width: 214px;
@@ -348,6 +371,10 @@
   .card {
     max-width: 214px;
   }
+
+  .icon-card {
+    height: 246px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -355,8 +382,16 @@
     max-width: 566px;
   }
 
+  .icon-card {
+    height: 290px;
+  }
+
   .hero {
     border-radius: 0;
+  }
+
+  .map-contact {
+    height: 300px;
   }
 }
 
@@ -367,6 +402,10 @@
 }
 
 @media (max-width: 767px) {
+  .info-card-text {
+    text-align: center;
+  }
+
   .row-gallery {
     margin-top: 1.5rem;
   }
