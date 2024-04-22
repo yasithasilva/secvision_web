@@ -1,5 +1,5 @@
 ﻿.bg-primary {
-  background-color: #03c03c !important;
+  background-color: #65B741 !important;
 }
 
 .bg-dark {
@@ -38,8 +38,12 @@
   color: #333333 !important;
 }
 
+.color-black {
+  color: #151515 !important;
+}
+
 .color-primary {
-  color: #03c03c !important;
+  color: #65B741 !important;
 }
 
 .center {
@@ -318,6 +322,19 @@
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 
+.hero-primary {
+  /* border-bottom-left-radius: 75px;
+  border-bottom-right-radius: 75px; */
+  /* background-color: #151515; */
+  border-radius: 0 0 75px 75px;
+  background-size: cover;
+  margin-top: 104px;
+  min-height: 500px; /* You must set a specified height */
+  background-position: right; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
 .image-careers {
   background-image: url(/images/careers.png) !important;
 }
@@ -375,6 +392,10 @@
   .icon-card {
     height: 246px;
   }
+
+  .hero-primary {
+    min-height: 580px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -387,6 +408,9 @@
   }
 
   .hero {
+    border-radius: 0;
+  }
+  .hero-primary {
     border-radius: 0;
   }
 
@@ -473,3 +497,63 @@
 .subscribe-bar {
   background-color: #0c0c0c;
 }
+
+/*****icon carousel******/
+
+.slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  /* width: 960px; */
+  /* background-color: #fbfbfb; */
+}
+
+.slider::before,
+.slider::after {
+  /* background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  ); */
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  animation: scroll 10s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+  background-color: #fbfbfb;
+}
+
+.slider .slide {
+  height: 100px;
+  width: 250px;
+  /* background-color: #070707; */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+/*****icon carousel end******/
