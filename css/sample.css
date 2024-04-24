@@ -1,5 +1,5 @@
 ﻿.bg-primary {
-  background-color: #03c03c !important;
+  background-color: #65b741 !important;
 }
 
 .bg-dark {
@@ -19,7 +19,11 @@
 }
 
 .bg-black {
-  background-color: #151515 impot !important;
+  background-color: #151515 !important;
+}
+
+.bg-ash {
+  background-color: #aaaaaa !important;
 }
 
 .color-white {
@@ -34,8 +38,12 @@
   color: #333333 !important;
 }
 
+.color-black {
+  color: #151515 !important;
+}
+
 .color-primary {
-  color: #03c03c !important;
+  color: #65b741 !important;
 }
 
 .center {
@@ -168,7 +176,7 @@
 /* Button lg start -------------------------------------------------------------------------------*/
 
 .btn-main {
-  color: #333333 !important;
+  /* color: #333333 !important; */
   height: 48px;
   background-color: #ffffff;
   white-space: nowrap;
@@ -314,12 +322,54 @@
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 
+.hero-primary {
+  /* border-bottom-left-radius: 75px;
+  border-bottom-right-radius: 75px; */
+  /* background-color: #151515; */
+  border-radius: 0 0 75px 75px;
+  background-size: cover;
+  margin-top: 104px;
+  min-height: 500px; /* You must set a specified height */
+  background-position: right; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.btn-service {
+  background-color: #f0f0f0;
+
+  width: 400px; /* Adjust the width as needed */
+  height: 40px; /* Set the height if needed */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+
+  opacity: 0px;
+}
+
 .image-careers {
   background-image: url(/images/careers.png) !important;
 }
 
 .image-blog {
   background-image: url(/images/blog.png) !important;
+}
+
+.image-contactus {
+  background-image: url(/images/contactus.png) !important;
+}
+
+.image-about {
+  background-image: url(/images/about.png) !important;
+}
+
+.image-products {
+  background-image: url(/images/products.png) !important;
+}
+
+.image-services {
+  background-image: url(/images/services.png) !important;
 }
 
 .gap-md {
@@ -337,26 +387,92 @@
   /* border-radius: 16px; */
 }
 
+.icon-card {
+  height: 290px;
+}
+
+.img-infocard {
+  justify-content: end;
+}
+
+.info-card-text {
+  align-items: start;
+}
+
+.info-card-img {
+}
+
+.homecard {
+  min-width: none !important;
+  height: auto;
+}
+
 @media (min-width: 990px) {
   .card {
     max-width: 214px;
     max-width: 304.75px;
   }
+
+  .homecard {
+    max-width: none;
+  }
 }
 
 @media (max-width: 990px) {
+  .info-card-img {
+    max-width: 440px;
+  }
+
+  .info-card-btn {
+    align-items: center;
+  }
+
+  .info-card-text {
+    text-align: center;
+  }
+
   .card {
     max-width: 214px;
+  }
+
+  .homecard {
+    max-width: none;
+  }
+
+  /* .icon-card {
+    height: 246px;
+  } */
+
+  .hero-primary {
+    min-height: 580px;
   }
 }
 
 @media (max-width: 575px) {
+  .btn-service {
+    width: 100%;
+  }
   .card {
     max-width: 566px;
   }
 
+  .homecard {
+    max-width: none;
+  }
+
+  .icon-card {
+    height: auto;
+  }
+
   .hero {
     border-radius: 0;
+  }
+  .hero-primary {
+    border-radius: 0;
+  }
+
+  .map-contact {
+    height: 300px;
   }
 }
 
@@ -367,6 +483,10 @@
 }
 
 @media (max-width: 767px) {
+  .info-card-text {
+    text-align: center;
+  }
+
   .row-gallery {
     margin-top: 1.5rem;
   }
@@ -433,4 +553,101 @@
 
 .subscribe-bar {
   background-color: #0c0c0c;
+}
+
+/*****icon carousel******/
+
+.slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  /* width: 960px; */
+  /* background-color: #fbfbfb; */
+}
+
+.slider::before,
+.slider::after {
+  /* background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  ); */
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  animation: scroll 10s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+  background-color: #fbfbfb;
+}
+
+.slider .slide {
+  height: 100px;
+  width: 250px;
+  /* background-color: #070707; */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+/*****icon carousel end******/
+
+.card-solid {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  /* padding-top: 54.9px;
+  padding-bottom: 54.9px;
+  padding-left: 58.5px;
+  padding-right: 57.6px; */
+  padding: 20%;
+  border-radius: 22.5px;
+  overflow: hidden;
+  border: 8px #65b741 solid;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+.card-solid-img {
+  flex: 1 1 0;
+  align-self: stretch;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+/**********image bg*********/
+
+.img-container {
+  background-image: url(/images/bg-bodypart.jpg) !important;
+  position: sticky;
+}
+
+.card-product {
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
