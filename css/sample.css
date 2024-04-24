@@ -1,5 +1,5 @@
 ﻿.bg-primary {
-  background-color: #65B741 !important;
+  background-color: #65b741 !important;
 }
 
 .bg-dark {
@@ -43,7 +43,7 @@
 }
 
 .color-primary {
-  color: #65B741 !important;
+  color: #65b741 !important;
 }
 
 .center {
@@ -176,7 +176,7 @@
 /* Button lg start -------------------------------------------------------------------------------*/
 
 .btn-main {
-  color: #333333 !important;
+  /* color: #333333 !important; */
   height: 48px;
   background-color: #ffffff;
   white-space: nowrap;
@@ -335,6 +335,19 @@
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 
+.btn-service {
+  background-color: #f0f0f0;
+
+  width: 400px; /* Adjust the width as needed */
+  height: 40px; /* Set the height if needed */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+
+  opacity: 0px;
+}
+
 .image-careers {
   background-image: url(/images/careers.png) !important;
 }
@@ -349,6 +362,14 @@
 
 .image-about {
   background-image: url(/images/about.png) !important;
+}
+
+.image-products {
+  background-image: url(/images/products.png) !important;
+}
+
+.image-services {
+  background-image: url(/images/services.png) !important;
 }
 
 .gap-md {
@@ -375,6 +396,15 @@
 }
 
 .info-card-text {
+  align-items: start;
+}
+
+.info-card-img {
+}
+
+.homecard {
+  min-width: none !important;
+  height: auto;
 }
 
 @media (min-width: 990px) {
@@ -382,16 +412,36 @@
     max-width: 214px;
     max-width: 304.75px;
   }
+
+  .homecard {
+    max-width: none;
+  }
 }
 
 @media (max-width: 990px) {
+  .info-card-img {
+    max-width: 440px;
+  }
+
+  .info-card-btn {
+    align-items: center;
+  }
+
+  .info-card-text {
+    text-align: center;
+  }
+
   .card {
     max-width: 214px;
   }
 
-  .icon-card {
-    height: 246px;
+  .homecard {
+    max-width: none;
   }
+
+  /* .icon-card {
+    height: 246px;
+  } */
 
   .hero-primary {
     min-height: 580px;
@@ -399,12 +449,19 @@
 }
 
 @media (max-width: 575px) {
+  .btn-service {
+    width: 100%;
+  }
   .card {
     max-width: 566px;
   }
 
+  .homecard {
+    max-width: none;
+  }
+
   .icon-card {
-    height: 290px;
+    height: auto;
   }
 
   .hero {
@@ -557,3 +614,40 @@
 }
 
 /*****icon carousel end******/
+
+.card-solid {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  /* padding-top: 54.9px;
+  padding-bottom: 54.9px;
+  padding-left: 58.5px;
+  padding-right: 57.6px; */
+  padding: 20%;
+  border-radius: 22.5px;
+  overflow: hidden;
+  border: 8px #65b741 solid;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+.card-solid-img {
+  flex: 1 1 0;
+  align-self: stretch;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+/**********image bg*********/
+
+.img-container {
+  background-image: url(/images/bg-bodypart.jpg) !important;
+  position: sticky;
+}
+
+.card-product {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
