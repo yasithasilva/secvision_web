@@ -113,10 +113,15 @@
 }
 
 .nav-link:hover {
-  /* background-color: #000000; */
-  border-radius: 8px;
+  color: #0c0c0c;
+  /* font-weight: 600; */
+  opacity: 1;
+}
+
+.nav-link.active {
   font-weight: 600;
-  text-shadow: #aaaaaa;
+  opacity: 1;
+  border-bottom: 3px solid rgb(255, 255, 255);
 }
 
 .navbar {
@@ -135,7 +140,7 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
   background-color: #0c0c0c;
 }
 
@@ -146,6 +151,7 @@
   font-style: normal;
   text-wrap: nowrap;
   font-size: 20px;
+  opacity: 0.75;
 }
 
 .navbar-toggler-icon {
@@ -313,9 +319,9 @@
   /* border-bottom-left-radius: 75px;
   border-bottom-right-radius: 75px; */
   /* background-color: #151515; */
-  border-radius: 0 0 75px 75px;
+  border-radius: 0 0 50px 50px;
   background-size: cover;
-  margin-top: 104px;
+  margin-top: 72px;
   height: 500px; /* You must set a specified height */
   background-position: right; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -326,9 +332,9 @@
   /* border-bottom-left-radius: 75px;
   border-bottom-right-radius: 75px; */
   /* background-color: #151515; */
-  border-radius: 0 0 75px 75px;
+  border-radius: 0 0 50px 50px;
   background-size: cover;
-  margin-top: 104px;
+  margin-top: 72px;
   min-height: 500px; /* You must set a specified height */
   background-position: right; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -407,6 +413,10 @@
   height: auto;
 }
 
+.card-user {
+  height: 100%;
+}
+
 @media (min-width: 990px) {
   .card {
     max-width: 214px;
@@ -465,10 +475,10 @@
   }
 
   .hero {
-    border-radius: 0;
+    border-radius: 0 0 25px 25px;
   }
   .hero-primary {
-    border-radius: 0;
+    border-radius: 0 0 25px 25px;
   }
 
   .map-contact {
