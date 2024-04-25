@@ -15,7 +15,7 @@
 }
 
 .bg-card-green {
-  background-color: #F6F6E4 !important;
+  background-color: #f6f6e4 !important;
 }
 
 .bg-gray-light {
@@ -57,7 +57,7 @@
   font-size: 60px;
   font-family: "Jost", sans-serif;
   font-weight: 800;
-  line-height: 56px;
+  line-height: 64px;
   word-wrap: break-word;
 }
 
@@ -254,7 +254,7 @@
 .btn-bordered:hover {
   text-decoration: none;
   background-color: #ffffff;
-  color: #333333 !important;
+  color: #65b741 !important;
 }
 
 .btn-bordered.focus,
@@ -409,8 +409,6 @@
   align-items: start;
 }
 
-.info-card-img {
-}
 
 .homecard {
   min-width: none !important;
