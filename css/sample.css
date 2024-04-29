@@ -168,6 +168,28 @@
   background-size: 100% 100%;
 }
 
+.navbar-front{
+  background-color: #65b741; /* Initial background color */
+    transition: background-color 0.5s ease; /* Smooth transition */
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+@media (max-width: 990px) {
+  .navbar-front {
+    background-color: #65b741; /* Initial background color */
+    transition: background-color 0.5s ease; /* Smooth transition */
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+
+  .navbar-front.scrolled {
+    background-color: #151515; /* Color to change to after scroll */
+  }
+}
+
 /* NavBar CSS-------------------------------------------------------------------------------------------------------------END */
 
 .hero-image {
@@ -409,7 +431,6 @@
   align-items: start;
 }
 
-
 .homecard {
   min-width: none !important;
   height: auto;
@@ -461,6 +482,10 @@
 }
 
 @media (max-width: 575px) {
+  .info-card-img {
+    max-width: 238px;
+  }
+
   .btn-service {
     width: 100%;
   }
