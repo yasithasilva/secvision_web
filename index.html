@@ -31,7 +31,7 @@
   <body class="bg-color">
     <!--navbar start--------------------------------------->
 
-    <nav class="navbar navbar-expand-lg fixed-top bg-primary">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-front">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
           <img src="images/icons/logo-white.png" alt="" class="nav-logo" />
@@ -186,7 +186,7 @@
       <!--icon cards end-------------------------------------------------------->
 
       <!--our services start-------------------------------------------------------->
-      <div class="row d-flex mt-5 mb-5 justify-content-center">
+      <div class="row d-flex mt-5 mb-5 justify-content-center fade-in">
         <h1 class="heading2 mb-4 mt-5 color-dark mb-5 text-center">
           Our
           <span class="color-primary">Services</span>
@@ -833,5 +833,19 @@
         </p>
       </div>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var navbar = document.querySelector(".navbar");
+
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 0) {
+            navbar.classList.add("scrolled");
+          } else {
+            navbar.classList.remove("scrolled");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
