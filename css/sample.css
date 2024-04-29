@@ -168,12 +168,12 @@
   background-size: 100% 100%;
 }
 
-.navbar-front{
+.navbar-front {
   background-color: #65b741; /* Initial background color */
-    transition: background-color 0.5s ease; /* Smooth transition */
-    position: fixed;
-    width: 100%;
-    top: 0;
+  transition: background-color 0.5s ease; /* Smooth transition */
+  position: fixed;
+  width: 100%;
+  /* top: 0; */
 }
 
 @media (max-width: 990px) {
@@ -358,9 +358,10 @@
   /* border-bottom-left-radius: 75px;
   border-bottom-right-radius: 75px; */
   /* background-color: #151515; */
+
   border-radius: 0 0 50px 50px;
   background-size: cover;
-  margin-top: 72px;
+  margin-top: 48px;
   min-height: 500px; /* You must set a specified height */
   background-position: right; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -452,6 +453,12 @@
 }
 
 @media (max-width: 990px) {
+  .pb-none-sm {
+    padding-bottom: 0 !important;
+  }
+  .pt-none-sm {
+    padding-top: 0 !important;
+  }
   .info-card-img {
     max-width: 440px;
   }
@@ -688,3 +695,117 @@
   padding-top: 96px;
   padding-bottom: 96px;
 }
+
+/* animation fade up */
+/* .fade-up {
+  opacity: 0 !important;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-up.fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+  opacity: 1; /* Make the element visible when the animation class is added 
+  transform: translateY(0);
+} */
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fade-in-up 1s ease;
+  animation-fill-mode: none;
+}
+
+@keyframes zoom-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.zoom-in {
+  animation: zoom-in 0.8s ease;
+  animation-fill-mode: none;
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slide-in-left 1s ease;
+  animation-fill-mode: none;
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  animation: slide-in-right 1s ease;
+  animation-fill-mode: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 1s ease;
+}
+
+@keyframes zoom-out {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+.zoom-out {
+  animation: zoom-out 0.8s ease;
+  animation-fill-mode: none;
+}
+
+/* animation fade up end*/
